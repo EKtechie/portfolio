@@ -40,12 +40,12 @@
     .hero-inner {
       display: flex;
       align-items: center;
-      gap: 3rem;
+      gap: 2.5rem;
       text-align: left;
     }
 
     .hero-photo {
-      width: 180px;
+      width: 160px;
       flex-shrink: 0;
       border-radius: 14px;
       object-fit: cover;
@@ -56,6 +56,7 @@
 
     .hero-text {
       flex: 1;
+      min-width: 0;
     }
 
     .hero-text .status-pill { margin-bottom: 1.2rem; }
@@ -63,7 +64,7 @@
 
     @media (max-width: 640px) {
       .hero-inner { flex-direction: column; text-align: center; gap: 1.8rem; }
-      .hero-photo { width: 130px; }
+      .hero-photo { width: 120px; }
       .hero-text .hero-actions { justify-content: center; }
     }
 
@@ -91,7 +92,8 @@
     }
 
     .hero {
-      max-width: 860px;
+      max-width: 960px;
+      width: 100%;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       background: var(--bg-soft);
@@ -131,7 +133,7 @@
 
     .hero h1 {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-size: clamp(1.8rem, 4vw, 3rem);
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.1;
@@ -145,6 +147,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       animation: shimmer 4s linear infinite;
+      white-space: nowrap;
     }
 
     .hero h1 .cursor {
@@ -711,7 +714,7 @@
         <h1>Hi, I'm <span class="name"><span id="typewriter"></span><span class="cursor">|</span></span></h1>
         <p>
           CSE graduate specializing in Data Science, Machine Learning, and NLP.
-          I build scalable, data‑driven solutions — from fraud detection systems to AI-powered cybersecurity applications and generative AI semantic search engines.
+          I build scalable, data‑driven solutions from fraud detection systems to AI-powered cybersecurity applications and generative AI semantic search engines.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn primary">View Projects</a>
